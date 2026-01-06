@@ -1,3 +1,11 @@
+$spacer: 10;
+$space:(
+  0: calc($spacer*.5),
+  1: $spacer,
+  2: calc($spacer*1.5),
+  3: calc($spacer*2)  
+);
+
 :root{
   // fonts
   --font-size: 100%;
@@ -12,10 +20,10 @@
   --base-border: rgb(120, 120, 120);
   --base-border-width: 1px;
   --base-border-radius: 10px;
+  // spacer
+  @each $name, $value in $space{
+    --sp-#{$name}: #{$value}px;
+  }
   //buttons
-  --btn-padding-Top: 5px;
-  --btn-padding-Right: 5px;
-  --btn-padding-Bottom: 5px;
-  --btn-padding-Left: 5px;
   --btn-icon-colour: var(--red);
 }
