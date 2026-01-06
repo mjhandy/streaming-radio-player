@@ -1,0 +1,21 @@
+:root{
+  // fonts
+  --font-size: 100%;
+  --line-height: 1.2;
+  // colours
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --red: rgb(255,0,0);
+  --green: rgb(0, 255, 0);
+  --blue: rgb(0, 0, 255);
+  // defined values
+  --base-border: rgb(120, 120, 120);
+  --base-border-width: 1px;
+  --base-border-radius: 10px;
+  //buttons
+  --btn-padding-Top: 5px;
+  --btn-padding-Right: 5px;
+  --btn-padding-Bottom: 5px;
+  --btn-padding-Left: 5px;
+  --btn-icon-colour: var(--red);
+}

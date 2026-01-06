@@ -1,0 +1,12 @@
+.radio{
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  max-width: 500px;
+  width: fit-content;
+  &_controls{
+    display: flex;
+    flex-flow: row;
+    gap: 15px;
+  }
+}

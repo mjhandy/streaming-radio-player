@@ -1,0 +1,27 @@
+{
+  "name": "streaming-radio-player",
+  "version": "0.0.1",
+  "description": "Web based streaming audio player for use in TV Billboard",
+  "homepage": "https://github.com/mjhandy/streaming-radio-player#readme",
+  "bugs": {
+    "url": "https://github.com/mjhandy/streaming-radio-player/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mjhandy@github.com/mjhandy/streaming-radio-player.git"
+  },
+  "license": "ISC",
+  "author": "Mark J. Handy",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^4.0.1",
+    "load-grunt-tasks": "^5.1.0",
+    "sass": "^1.97.2"
+  }
+}
