@@ -27,7 +27,8 @@
           </span>
         </button>
       </div>
-      <div id="radioStatons" class="radio_stations"></div>
+      <div id="radioStatonsButtons" class="radio_stations"></div>
     </div>
+    <script src="./javascript/player.js"></script>
   </body>
 </html>

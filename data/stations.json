@@ -1,0 +1,12 @@
+[
+  {
+    "callsign": "CBHA",
+    "name": "CBC Radio 1 Halifax",
+    "url": "https://29243.live.streamtheworld.com:443/CBHA_CBC_SC"
+  },
+  {
+    "callsign": "CBH",
+    "name": "CBC Music Halifax",
+    "url": "http://26283.live.streamtheworld.com:80/CBH_CBC_SC"
+  }
+]
