@@ -3,10 +3,9 @@
   <head>
     <title></title>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+   
+   
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
@@ -14,13 +13,17 @@
       <div class="radio_info"></div>
       <div class="radio_controls">
         <button type="button" name="playPause" class="btn btn-icon">
-          <span class="material-symbols-rounded">
-            play_arrow
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+              <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
           </span>
         </button>
         <button type="button" name="mute" class="btn btn-icon">
-          <span class="material-symbols-rounded">
-            volume_off
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-volume-mute-fill" viewBox="0 0 16 16">
+              <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/>
+            </svg>
           </span>
         </button>
       </div>
