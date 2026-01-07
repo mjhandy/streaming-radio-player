@@ -24,7 +24,7 @@ function createButtonsFromJSON(data, containerId) {
     btn.classList.add('btn');
     btn.classList.add('changeStation');
     btn.textContent = item.callsign;
-    
+
     const radioPlayer = document.getElementById('radioPlayer');
     const radioName = document.getElementById('radioName');
     btn.addEventListener("click", () => {
@@ -51,3 +51,11 @@ fetch("./data/stations.json")
     console.error("Error loading JSON:", error);
     document.getElementById("buttonContainer").textContent = "Failed to load buttons.";
   });
+
+// player control buttons
+const radioPlayer = document.getElementById('radioPlayer');
+const playPauseButton = document.getElementById('playPauseButton');
+
+playPauseButton.addEventListener("click", () =>{
+  
+});
