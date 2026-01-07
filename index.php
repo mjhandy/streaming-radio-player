@@ -10,7 +10,12 @@
   </head>
   <body>
     <div id="streamingRadio" class="radio">
-      <div class="radio_info"></div>
+      <div class="radio_info">
+        <div id="radioName"></div>
+      </div>
+      <div clsss="radio_player">
+        <audio id="radioPlayer">
+      </div>
       <div class="radio_controls">
         <button type="button" name="playPause" class="btn btn-icon">
           <span class="icon">

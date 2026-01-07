@@ -25,9 +25,13 @@ function createButtonsFromJSON(data, containerId) {
     btn.classList.add('changeStation');
     btn.textContent = item.callsign;
     
-
+    const radioPlayer = document.getElementById('radioPlayer');
+    const radioName = document.getElementById('radioName');
     btn.addEventListener("click", () => {
-      alert(item.actionMessage || `Button "${item.callsign}" clicked.`);
+      // alert(item.actionMessage || `Button "${item.callsign}" clicked. URL:"${item.url}"`);
+      radioPlayer.src = item.url;
+      radioPlayer.play();
+      radioName.textContent = item.name;
     });
 
     container.appendChild(btn);
