@@ -1,9 +1,10 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 :root {
   --font-size: 100%;
   --line-height: 1.2;
   --black: rgb(0, 0, 0);
   --white: rgb(255, 255, 255);
-  --red: rgb(255, 0, 0);
+  --red: rgb(255,0,0);
   --green: rgb(0, 255, 0);
   --blue: rgb(0, 0, 255);
   --base-border: rgb(120, 120, 120);
@@ -34,15 +35,14 @@ body {
 }
 
 .btn {
-  background: transparent;
-  border: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  background: transparent;
+  border: none;
 }
-
 .btn-control {
-
+  display: flex;
+  justify-content: center;
   border-radius: var(--btn-radius);
   padding: var(--sp-0) var(--sp-0) var(--sp-0) var(--sp-0);
   width: 50px;
@@ -53,30 +53,21 @@ body {
   color: var(--btn-colour);
   border: 1px solid #1F1F1F;
   box-shadow: 0 1px 3px 0px rgba(15, 15, 15, 0.5), inset 0 1px rgba(255, 255, 255, 0.2);
-
-  .icon {
-    display: block;
-    width: 30px;
-    height: 30px;
-
-    svg {
-      width: 100%;
-      height: auto;
-    }
-  }
 }
-
-
-.btn-control:active {
+.btn-control .icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+.btn-control .icon:active {
   color: #000;
-  background-position: 0 50%;
-  background: #333333;
-  box-shadow: inset 0 2px 3px rgba(var(--black), 0.5), 0 1px 1px rgba(var(--white), 0.1);
 }
-
-.btn-control:active span:before {
-  color: #111;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+.btn-changeStation {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  justify-content: space-between;
 }
 
 .radio {
@@ -86,12 +77,15 @@ body {
   max-width: 500px;
   width: fit-content;
 }
-
 .radio_controls {
   display: flex;
   flex-flow: row;
   gap: 15px;
   padding: var(--sp-0);
 }
-
+.radio_stations {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
 /*# sourceMappingURL=main.css.map */

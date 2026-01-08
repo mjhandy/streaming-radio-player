@@ -10,4 +10,9 @@
     gap: 15px;
     padding: var(--sp-0);
   }
+  &_stations{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+  }
 }

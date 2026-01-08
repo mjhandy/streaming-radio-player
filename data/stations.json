@@ -1,12 +1,32 @@
 [
   {
     "callsign": "CBHA",
-    "name": "CBC Radio 1 Halifax",
+    "freq": "90.5",
+    "name": "CBC Radio 1",
     "url": "https://29243.live.streamtheworld.com:443/CBHA_CBC_SC"
   },
   {
-    "callsign": "CBH",
-    "name": "CBC Music Halifax",
+    "callsign": "CBH-FM",
+    "freq": "102.7",
+    "name": "CBC Music",
     "url": "http://26283.live.streamtheworld.com:80/CBH_CBC_SC"
+  },
+  {
+    "callsign":"CKBW-FM",
+    "freq":"98.1",
+    "name":"CKBW FM",
+    "url":"https://ais-sa1.streamon.fm/7239_128k.aac"
+  },
+  {
+    "callsign":"CJHK-FM",
+    "freq":"100.7",
+    "name":"Country 100.7",
+    "url":"https://ais-sa1.streamon.fm/7226_128k.aac"
+  },
+  {
+    "callsign": "CHNS-FM",
+    "freq":"89.9",
+    "name":"89.9 The Wave",
+    "url":"https://mbsradio-ais.leanstream.co/CHNSFM-MP3"
   }
 ]

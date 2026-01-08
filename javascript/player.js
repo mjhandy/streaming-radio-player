@@ -19,11 +19,22 @@ function createButtonsFromJSON(data, containerId) {
       return;
     }
 
+    // build out the station play buttons
     const btn = document.createElement("button");
     btn.setAttribute('id', item.callsign);
-    btn.classList.add('btn');
-    btn.classList.add('changeStation');
-    btn.textContent = item.callsign;
+    btn.classList.add('btn', 'btn-changeStation');
+
+    // create the text node
+    btn.append(document.createTextNode(item.name));
+
+    // create the span
+    const span = document.createElement('span');
+    span.classList.add('bi', 'bi-caret-right-fill'); // bootstrap icon
+
+    // append the span after the text
+    btn.append(span);
+
+
 
     const radioPlayer = document.getElementById('radioPlayer');
     const radioName = document.getElementById('radioName');
@@ -31,7 +42,7 @@ function createButtonsFromJSON(data, containerId) {
       // alert(item.actionMessage || `Button "${item.callsign}" clicked. URL:"${item.url}"`);
       radioPlayer.src = item.url;
       radioPlayer.play();
-      radioName.textContent = item.name;
+      radioName.textContent = item.callsign + ' - ' + item.name;
     });
 
     container.appendChild(btn);
@@ -56,6 +67,6 @@ fetch("./data/stations.json")
 const radioPlayer = document.getElementById('radioPlayer');
 const playPauseButton = document.getElementById('playPauseButton');
 
-playPauseButton.addEventListener("click", () =>{
-  
+playPauseButton.addEventListener("click", () => {
+
 });
