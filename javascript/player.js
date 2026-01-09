@@ -1,8 +1,8 @@
 /**
-     * Creates buttons from JSON data and appends them to a container.
-     * @param {Array} data - Array of objects with 'label' and 'actionMessage'.
-     * @param {string} containerId - The ID of the HTML container element.
-     */
+ * Creates buttons from JSON data and appends them to a container.
+ * @param {Array} data - Array of objects with 'label' and 'actionMessage'.
+ * @param {string} containerId - The ID of the HTML container element.
+ */
 function createButtonsFromJSON(data, containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = ""; // Clear loading text
@@ -49,7 +49,7 @@ function createButtonsFromJSON(data, containerId) {
   });
 }
 
-// Fetch JSON from external file
+// Fetch JSON file with station data from external file
 fetch("./data/stations.json")
   .then(response => {
     if (!response.ok) {
@@ -66,7 +66,25 @@ fetch("./data/stations.json")
 // player control buttons
 const radioPlayer = document.getElementById('radioPlayer');
 const playPauseButton = document.getElementById('playPauseButton');
+const muteButton = document.getElementById('muteButton');
 
+
+// audio control
 playPauseButton.addEventListener("click", () => {
-
+  // get play status
+  const status = playPauseButton.getAttribute("status");
+  if (status === 'stopped') {
+    // change status to playing
+    playPauseButton.setAttribute('status', 'playing');
+  } else {
+    // change status to stopped
+    playPauseButton.setAttribute('status', 'stopped');
+  }
+  // check play status value, and change audio play status
+  console.log(this);
+  console.log('play button clicked:', status);
 });
+
+muteButton.addEventListener("click", () => {
+  console.log('mute button clicked');
+})

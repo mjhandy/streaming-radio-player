@@ -17,12 +17,12 @@
         <audio id="radioPlayer">
       </div>
       <div class="radio_controls">
-        <button type="button" id="playPauseButton" name="playPauseButton" class="btn btn-control btn-icon">
+        <button type="button" id="playPauseButton" name="playPauseButton" class="btn btn-control btn-icon" status="stopped">
           <span class="icon bi bi-caret-right-fill">
 
           </span>
         </button>
-        <button type="button" name="mute" class="btn btn-control btn-icon">
+        <button type="button" id="muteButton" name="muteButton" class="btn btn-control btn-icon">
           <span class="icon bi bi-volume-mute-fill">
 
           </span>
