@@ -18,12 +18,12 @@
       </div>
       <div class="radio_controls">
         <button type="button" id="playPauseButton" name="playPauseButton" class="btn btn-control btn-icon" status="stopped">
-          <span class="icon bi bi-caret-right-fill">
+          <span id="playIcon" class="icon bi bi-caret-right-fill">
 
           </span>
         </button>
-        <button type="button" id="muteButton" name="muteButton" class="btn btn-control btn-icon">
-          <span class="icon bi bi-volume-mute-fill">
+        <button type="button" id="muteButton" name="muteButton" class="btn btn-control btn-icon" status="muted">
+          <span id="pauseIcon" class="icon bi bi-volume-mute-fill">
 
           </span>
         </button>

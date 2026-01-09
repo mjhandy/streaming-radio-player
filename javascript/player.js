@@ -66,25 +66,43 @@ fetch("./data/stations.json")
 // player control buttons
 const radioPlayer = document.getElementById('radioPlayer');
 const playPauseButton = document.getElementById('playPauseButton');
+const playIcon = document.getElementById('playIcon');
 const muteButton = document.getElementById('muteButton');
 
 
-// audio control
+/**
+ * Audio controls buttons
+ * Play/Pause and Mute/Unmute
+ */
 playPauseButton.addEventListener("click", () => {
   // get play status
   const status = playPauseButton.getAttribute("status");
   if (status === 'stopped') {
     // change status to playing
     playPauseButton.setAttribute('status', 'playing');
+    // update icon, if needed
+    if (playIcon.classList.contains('bi-caret-right-fill')){
+      playIcon.classList.remove('bi-caret-right-fill');
+      playIcon.classList.add('bi-pause-fill');
+    }
   } else {
-    // change status to stopped
-    playPauseButton.setAttribute('status', 'stopped');
+  // change status to stopped
+  playPauseButton.setAttribute('status', 'stopped');
+  if (playIcon.classList.contains('bi-pause-fill') ){
+    playIcon.classList.remove('bi-pause-fill');
+    playIcon.classList.add('bi-caret-right-fill');
   }
+}
   // check play status value, and change audio play status
-  console.log(this);
   console.log('play button clicked:', status);
 });
 
 muteButton.addEventListener("click", () => {
   console.log('mute button clicked');
+  const status = muteButton.getAttribute("status");
+  if (status === 'muted'){
+    muteButton.setAttribute('status', 'playing');
+  } else {
+    muteButton.setAttribute('status', 'muted');
+  }
 })
