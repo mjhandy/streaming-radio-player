@@ -68,6 +68,7 @@ const radioPlayer = document.getElementById('radioPlayer');
 const playPauseButton = document.getElementById('playPauseButton');
 const playIcon = document.getElementById('playIcon');
 const muteButton = document.getElementById('muteButton');
+const muteIcon = document.getElementById('muteIcon');
 
 
 /**
