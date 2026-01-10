@@ -47,6 +47,8 @@ function createButtonsFromJSON(data, containerId) {
 
     container.appendChild(btn);
   });
+
+  // load a random station on initial load
 }
 
 // Fetch JSON file with station data from external file
@@ -63,6 +65,12 @@ fetch("./data/stations.json")
     document.getElementById("buttonContainer").textContent = "Failed to load buttons.";
   });
 
+
+/**
+ * Audio controls buttons
+ * Play/Pause and Mute/Unmute
+ */
+
 // player control buttons
 const radioPlayer = document.getElementById('radioPlayer');
 const playPauseButton = document.getElementById('playPauseButton');
@@ -71,10 +79,6 @@ const muteButton = document.getElementById('muteButton');
 const muteIcon = document.getElementById('muteIcon');
 
 
-/**
- * Audio controls buttons
- * Play/Pause and Mute/Unmute
- */
 playPauseButton.addEventListener("click", () => {
   // get play status
   const status = playPauseButton.getAttribute("status");
@@ -82,18 +86,19 @@ playPauseButton.addEventListener("click", () => {
     // change status to playing
     playPauseButton.setAttribute('status', 'playing');
     // update icon, if needed
-    if (playIcon.classList.contains('bi-caret-right-fill')){
+    if (playIcon.classList.contains('bi-caret-right-fill')) {
       playIcon.classList.remove('bi-caret-right-fill');
       playIcon.classList.add('bi-pause-fill');
     }
-  } else {
-  // change status to stopped
-  playPauseButton.setAttribute('status', 'stopped');
-  if (playIcon.classList.contains('bi-pause-fill') ){
-    playIcon.classList.remove('bi-pause-fill');
-    playIcon.classList.add('bi-caret-right-fill');
   }
-}
+  else {
+    // change status to stopped
+    playPauseButton.setAttribute('status', 'stopped');
+    if (playIcon.classList.contains('bi-pause-fill')) {
+      playIcon.classList.remove('bi-pause-fill');
+      playIcon.classList.add('bi-caret-right-fill');
+    }
+  }
   // check play status value, and change audio play status
   console.log('play button clicked:', status);
 });
@@ -101,7 +106,7 @@ playPauseButton.addEventListener("click", () => {
 muteButton.addEventListener("click", () => {
   console.log('mute button clicked');
   const status = muteButton.getAttribute("status");
-  if (status === 'muted'){
+  if (status === 'muted') {
     muteButton.setAttribute('status', 'playing');
   } else {
     muteButton.setAttribute('status', 'muted');
