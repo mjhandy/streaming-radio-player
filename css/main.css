@@ -18,8 +18,9 @@
   --sp-2: 15px;
   --sp-3: 20px;
   --btn-icon-colour: var(--red);
-  --btn-radius: 50%;
+  --btn-radius: 5px;
   --btn-colour: var(--white);
+  --btn-bg: linear-gradient(to top, #daff56 0%,#5ba100 100%);
   --display-font: 'LCD Normal' ;
 }
 
@@ -51,18 +52,14 @@ body {
   padding: var(--sp-0) var(--sp-0) var(--sp-0) var(--sp-0);
   width: 25px;
   height: 25px;
-  background: linear-gradient(#737373, #333333);
-  background-size: auto 150%;
-  background-position: 0 100%;
+  background: var(--btn-bg);
   color: var(--btn-colour);
   border: 1px solid #1F1F1F;
   box-shadow: 0 1px 3px 0px rgba(15, 15, 15, 0.5), inset 0 1px rgba(255, 255, 255, 0.2);
 }
 .btn-control .icon {
-  display: block;
-  width: 30px;
-  height: 30px;
-  font-size: 30px;
+  color: var(--black);
+  font-size: 20px;
 }
 .btn-control .icon:active {
   color: #000;
@@ -72,10 +69,10 @@ body {
   align-items: center;
   justify-content: center;
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: var(--btn-radius);
   width: 40px;
   height: 40px;
-  background-color: var(--selectBG);
+  background: var(--btn-bg);
 }
 
 .radio {
@@ -93,6 +90,7 @@ body {
   width: 75%;
   height: 50px;
   position: relative;
+  flex-grow: 2;
 }
 .radio_name {
   position: absolute;
@@ -107,6 +105,7 @@ body {
 .radio_controls {
   display: flex;
   flex-flow: row;
+  flex-grow: 1;
   gap: 15px;
   width: 75px;
   padding: var(--sp-0);
