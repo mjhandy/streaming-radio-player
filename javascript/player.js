@@ -25,24 +25,23 @@ function createButtonsFromJSON(data, containerId) {
     btn.classList.add('btn', 'btn-changeStation');
 
     // create the text node
-    btn.append(document.createTextNode(item.name));
+    btn.append(document.createTextNode(item.freq));
 
     // create the span
-    const span = document.createElement('span');
-    span.classList.add('bi', 'bi-caret-right-fill'); // bootstrap icon
+    // const span = document.createElement('span');
+    // span.classList.add('bi', 'bi-caret-right-fill'); // bootstrap icon
 
     // append the span after the text
-    btn.append(span);
+    // btn.append(span);
 
 
 
     const radioPlayer = document.getElementById('radioPlayer');
     const radioName = document.getElementById('radioName');
     btn.addEventListener("click", () => {
-      // alert(item.actionMessage || `Button "${item.callsign}" clicked. URL:"${item.url}"`);
       radioPlayer.src = item.url;
       radioPlayer.play();
-      radioName.textContent = item.callsign + ' - ' + item.name;
+      radioName.textContent = item.name;
     });
 
     container.appendChild(btn);

@@ -2,16 +2,16 @@
 <html>
   <head>
     <title></title>
-
-
-   
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
     <div id="streamingRadio" class="radio">
       <div class="radio_info">
-        <div id="radioName"></div>
+        <div id="radioName" class="radio_name displayFont"></div>
       </div>
       <div clsss="radio_player">
         <audio id="radioPlayer">

@@ -6,12 +6,12 @@
 
   &-control {
     display: flex;
-    
+
     justify-content: center;
     border-radius: var(--btn-radius);
     padding: var(--sp-0) var(--sp-0) var(--sp-0) var(--sp-0);
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     background: linear-gradient(#737373, #333333);
     background-size: auto 150%;
     background-position: 0 100%;
@@ -35,10 +35,14 @@
 
   }
 
-  &-changeStation{
+  &-changeStation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #000;
     border-radius: 5px;
-    padding : 5px 10px;
-    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    background-color: var(--selectBG);
   }
 }

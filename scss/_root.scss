@@ -16,6 +16,11 @@ $space:(
   --red: rgb(255,0,0);
   --green: rgb(0, 255, 0);
   --blue: rgb(0, 0, 255);
+  // radio display rules
+  --displayBG: rgb(0, 30, 0);
+  --displayFontColour: rgb(0, 182, 0);
+  // radio station select
+  --selectBG: green;
   // defined values
   --base-border: rgb(120, 120, 120);
   --base-border-width: 1px;
@@ -28,4 +33,6 @@ $space:(
   --btn-icon-colour: var(--red);
   --btn-radius: 50%;
   --btn-colour: var(--white);
+  // font familes
+  --display-font: 'LCD Normal'
 }
