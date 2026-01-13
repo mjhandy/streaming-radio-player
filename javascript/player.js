@@ -39,9 +39,14 @@ function createButtonsFromJSON(data, containerId) {
     const radioPlayer = document.getElementById('radioPlayer');
     const radioName = document.getElementById('radioName');
     btn.addEventListener("click", () => {
+      // stop any current autio
+      radioPlayer.pause();
+      // load the new stream
       radioPlayer.src = item.url;
-      radioPlayer.play();
+      // update the display with the station name
       radioName.textContent = item.name;
+      radioPlayer.play();
+      
     });
 
     container.appendChild(btn);

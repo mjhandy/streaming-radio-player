@@ -1,39 +1,41 @@
-.radio{
+.radio {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  width: 500px;
+  width: 100%;
+  // width: 600px;
   aspect-ratio: 3.5/1;
-  border: 1px solid black;
-  margin: 20px;
+  // border: 1px solid black;
+  // margin: 20px;
   background-color: var(--black);
-  &_info{
-    background-color: var(--displayBG);
-    width: 75%;
-    height: 50px;
-    position: relative;
-    flex-grow: 2;
+  &_info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
-  &_name{
-    position: absolute;
-    top: 10px;
-    right: 5px;
-    left: 5px;
+  &_name {
+    width: 75%;
     font-size: 55px;
-    line-height: .5;
-    z-index: 10;
-    color: var(--displayFontColour)
+    line-height: 0;
+    color: var(--displayFontColour);
+    background-color: var(--displayBG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  &_controls{
+  &_controls {
     display: flex;
     flex-flow: row;
     flex-grow: 1;
     gap: 15px;
-    width: 75px;
+    width: 25%;
     padding: var(--sp-0);
+    align-items: center;
+    justify-content: center;
+   
   }
-  &_stations{
+  &_stations {
     display: flex;
     flex-flow: row;
     flex-grow: 1;
@@ -41,5 +43,9 @@
     gap: 10px;
     width: 50px;
     height: 50px;
+  }
+  // hide the radio player and browser controls
+  &_player {
+    display: none;
   }
 }
