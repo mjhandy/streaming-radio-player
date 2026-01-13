@@ -1,0 +1,39 @@
+$spacer: 10;
+$space:(
+  0: calc($spacer*.5),
+  1: $spacer,
+  2: calc($spacer*1.5),
+  3: calc($spacer*2)  
+);
+
+:root{
+  // fonts
+  --font-size: 100%;
+  --line-height: 1.2;
+  // colours
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --red: rgb(255,0,0);
+  --green: rgb(0, 255, 0);
+  --blue: rgb(0, 0, 255);
+  // radio display rules
+  --displayBG: rgb(0, 30, 0);
+  --displayFontColour: rgb(0, 182, 0);
+  // radio station select
+  --selectBG: green;
+  // defined values
+  --base-border: rgb(120, 120, 120);
+  --base-border-width: 1px;
+  --base-border-radius: 10px;
+  // spacer
+  @each $name, $value in $space{
+    --sp-#{$name}: #{$value}px;
+  }
+  //buttons
+  --btn-icon-colour: var(--red);
+  --btn-radius: 5px;
+  --btn-colour: var(--white);
+  --btn-bg: linear-gradient(to top, #daff56 0%,#5ba100 100%); 
+  // font familes
+  --display-font: 'LCD Normal'
+}

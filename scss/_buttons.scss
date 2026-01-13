@@ -1,0 +1,43 @@
+.btn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+
+  &-control {
+    display: flex;
+
+    justify-content: center;
+    border-radius: var(--btn-radius);
+    padding: var(--sp-0) var(--sp-0) var(--sp-0) var(--sp-0);
+    width: 25px;
+    height: 25px;
+    background: var(--btn-bg);
+    // background-size: auto 150%;
+    // background-position: 0 100%;
+    color: var(--btn-colour);
+    border: 1px solid #1F1F1F;
+    box-shadow: 0 1px 3px 0px rgba(#0F0F0F, .5), inset 0 1px rgba(#FFF, .2);
+
+    .icon {
+      color: var(--black);
+      font-size: 20px;
+
+      &:active {
+        color: #000;
+
+      }
+    }
+  }
+
+  &-changeStation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius:var(--btn-radius);
+    width: 40px;
+    height: 40px;
+    background: var(--btn-bg);
+  }
+}

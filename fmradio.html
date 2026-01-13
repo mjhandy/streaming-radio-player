@@ -1,0 +1,163 @@
+<!-- Language: HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enhanced Retro FM Car Radio - Nova Scotia</title>
+<style>
+  body {
+    background: #1b1b2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  .radio {
+    background: #2e2e4d;
+    width: 420px;
+    height: 220px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+    position: relative;
+    color: #fff;
+  }
+  .dial {
+    position: relative;
+    height: 60px;
+    margin: 20px 0;
+    background: linear-gradient(to right, #444, #666);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .dial-bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #555 0%, #888 100%);
+  }
+  .tick {
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background: gold;
+    top: 0;
+  }
+  .needle {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: red;
+    left: 0;
+    transition: left 0.3s ease;
+  }
+  .freq-display {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #ffcc00;
+  }
+  .knobs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .knob {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #444;
+    border: 2px solid #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .presets {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .preset-btn {
+    padding: 6px 12px;
+    background: #555;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #ffcc00;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .preset-btn:hover {
+    background: #777;
+  }
+</style>
+</head>
+<body>
+<div class="radio">
+  <div class="dial" id="dial">
+    <div class="dial-bar"></div>
+    <div class="needle" id="needle"></div>
+  </div>
+  <div class="freq-display" id="freqDisplay">88.1 MHz</div>
+  <div class="knobs">
+    <div class="knob" id="volumeKnob">🔊</div>
+    <div class="knob" id="tuneKnob">🎚️</div>
+  </div>
+  <div class="presets">
+    <button class="preset-btn" onclick="playStation('https://ns1.cbc.ca/radio/stream')">CBC Music</button>
+    <button class="preset-btn" onclick="playStation('https://novastreaming.radio/92.5')">Nova 92.5</button>
+    <button class="preset-btn" onclick="playStation('https://novastreaming.radio/104.9')">Wave 104.9</button>
+  </div>
+  <audio id="radioPlayer" autoplay></audio>
+</div>
+
+<script>
+  const stations = {
+    'CBC Music': 'https://ns1.cbc.ca/radio/stream',
+    'Nova 92.5': 'https://novastreaming.radio/92.5',
+    'Wave 104.9': 'https://novastreaming.radio/104.9'
+  };
+
+  const dial = document.getElementById('dial');
+  const needle = document.getElementById('needle');
+  const freqDisplay = document.getElementById('freqDisplay');
+  const player = document.getElementById('radioPlayer');
+
+  // Generate frequency tick marks from 88 MHz to 108 MHz
+  for (let f = 88; f <= 108; f += 1) {
+    const tick = document.createElement('div');
+    tick.classList.add('tick');
+    let left = ((f - 88) / 20) * 100; // Map 88–108 MHz to 0–100%
+    tick.style.left = `${left}%`;
+    if (f % 2 === 0) tick.style.height = '18px'; // longer ticks for even numbers
+    dial.appendChild(tick);
+  }
+
+  function playStation(url) {
+    player.src = url;
+    player.play();
+    updateNeedleAndDisplay(url);
+  }
+
+  function updateNeedleAndDisplay(url) {
+    let freq = 88.1;
+    if (url.includes('92.5')) freq = 92.5;
+    else if (url.includes('104.9')) freq = 104.9;
+    else if (url.includes('cbc')) freq = 88.1;
+
+    freqDisplay.innerText = `${freq} MHz`;
+
+    // Map frequency to needle position (0% to 100%)
+    let left = ((freq - 88) / 20) * 100;
+    needle.style.left = `${left}%`;
+  }
+
+  // Initialize with CBC Music
+  playStation('https://ns1.cbc.ca/radio/stream');
+</script>
+</body>
+</html>
