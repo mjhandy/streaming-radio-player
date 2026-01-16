@@ -14,7 +14,9 @@
         <audio id="radioPlayer">
       </div>
       <div class="radio_info">
-        <div id="radioName" class="radio_name displayFont"></div>
+        <div id="radioName" class="radio_name displayFont">
+          Please Pick A Station
+        </div>
         <div class="radio_controls">
           <button type="button" id="playPauseButton" name="playPauseButton" class="btn btn-control btn-icon" status="stopped">
             <span id="playIcon" class="icon bi bi-caret-right-fill"></span>

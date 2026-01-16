@@ -19,7 +19,7 @@
   --sp-3: 20px;
   --btn-icon-colour: var(--red);
   --btn-radius: 5px;
-  --btn-colour: var(--white);
+  --btn-colour: var(--black);
   --btn-bg: linear-gradient(to top, #daff56 0%,#5ba100 100%);
   --display-font: 'LCD Normal' ;
 }
@@ -42,82 +42,75 @@ body {
 .btn {
   display: flex;
   align-items: center;
-  background: transparent;
-  border: none;
-}
-.btn-control {
-  display: flex;
   justify-content: center;
-  border-radius: var(--btn-radius);
-  padding: var(--sp-0) var(--sp-0) var(--sp-0) var(--sp-0);
-  width: 25px;
-  height: 25px;
   background: var(--btn-bg);
   color: var(--btn-colour);
-  border: 1px solid #1F1F1F;
   box-shadow: 0 1px 3px 0px rgba(15, 15, 15, 0.5), inset 0 1px rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  container-type: inline-size;
+}
+.btn-control {
+  width: 33.33%;
+  aspect-ratio: 1/1;
+  /* Track the container's inline (width) size */
 }
 .btn-control .icon {
   color: var(--black);
-  font-size: 20px;
+  font-size: 80cqw;
 }
 .btn-control .icon:active {
   color: #000;
 }
 .btn-changeStation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #000;
-  border-radius: var(--btn-radius);
-  width: 40px;
-  height: 40px;
-  background: var(--btn-bg);
+  width: 10%;
+  aspect-ratio: 3/1;
+  font-size: 3cqw;
+  font-weight: 700;
 }
 
 .radio {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  width: 500px;
+  width: 100%;
   aspect-ratio: 3.5/1;
-  border: 1px solid black;
-  margin: 20px;
   background-color: var(--black);
 }
 .radio_info {
-  background-color: var(--displayBG);
-  width: 75%;
-  height: 50px;
-  position: relative;
-  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 .radio_name {
-  position: absolute;
-  top: 10px;
-  right: 5px;
-  left: 5px;
+  width: 75%;
   font-size: 55px;
-  line-height: 0.5;
-  z-index: 10;
+  line-height: 0;
   color: var(--displayFontColour);
+  background-color: var(--displayBG);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .radio_controls {
   display: flex;
   flex-flow: row;
-  flex-grow: 1;
   gap: 15px;
-  width: 75px;
-  padding: var(--sp-0);
+  width: 25%;
+  align-items: center;
+  justify-content: center;
 }
 .radio_stations {
   display: flex;
   flex-flow: row;
   flex-grow: 1;
   justify-content: center;
+  align-items: center;
   gap: 10px;
-  width: 50px;
-  height: 50px;
+}
+.radio_player {
+  display: none;
 }
 
 .displayFont {

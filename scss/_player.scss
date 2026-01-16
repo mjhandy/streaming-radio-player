@@ -27,10 +27,8 @@
   &_controls {
     display: flex;
     flex-flow: row;
-    flex-grow: 1;
     gap: 15px;
     width: 25%;
-    padding: var(--sp-0);
     align-items: center;
     justify-content: center;
    
@@ -40,9 +38,8 @@
     flex-flow: row;
     flex-grow: 1;
     justify-content: center;
+    align-items: center;
     gap: 10px;
-    width: 50px;
-    height: 50px;
   }
   // hide the radio player and browser controls
   &_player {

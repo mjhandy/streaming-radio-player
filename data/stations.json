@@ -28,5 +28,11 @@
     "freq":"89.9",
     "name":"89.9 The Wave",
     "url":"https://mbsradio-ais.leanstream.co/CHNSFM-MP3"
+  },
+  {
+    "callsign": "CKDH-FM",
+    "freq": "101.7",
+    "name":"Today's Best Country",
+    "url":"https://mbsradio-ais.leanstream.co/CKDHFM-MP3?args=web_01"
   }
 ]
